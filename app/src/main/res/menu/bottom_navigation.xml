@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_historial"
+        android:icon="@drawable/ic_iconfinder_artboard_13_3874672"
+        android:title="Historiales"/>
+    <item
+        android:id="@+id/nav_watson"
+        android:icon="@drawable/ic_bot"
+        android:title="Watson" />
+    <item
+        android:id="@+id/nav_informacion"
+        android:icon="@drawable/ic_information"
+        android:title="Información"/>
+    <item
+        android:id="@+id/nav_configuracion"
+        android:icon="@drawable/ic_configuration"
+        android:title="Ajustes"/>
+
+</menu>
