@@ -196,7 +196,7 @@ public class LoginActivity extends AppCompatActivity {
                                 //Fin de la barra de progreso:
                                 progressDialog.dismiss();
                             }
-                        }, 3000);
+                        }, 8000);
             }
 
             @Override
@@ -279,7 +279,7 @@ public class LoginActivity extends AppCompatActivity {
                                             public void onResponse(Call<User> call, Response<User> response) {
                                                 try{
                                                     if(response.isSuccessful()){
-
+                                                        preferences.edit().putString("pk", response.body().getPk().toString()).commit();
                                                         preferences.edit().putString("username", response.body().getUsername()).commit();
                                                         preferences.edit().putString("first_name", response.body().getFirst_name()).commit();
                                                         preferences.edit().putString("last_name", response.body().getLast_name()).commit();
@@ -304,7 +304,7 @@ public class LoginActivity extends AppCompatActivity {
                                         // onLoginFailed();
                                         progressDialog.dismiss();
                                     }
-                                }, 3000);
+                                }, 8000);
 
                     } else {
                         onLoginFailed();

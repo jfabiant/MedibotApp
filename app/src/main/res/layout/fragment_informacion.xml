@@ -168,7 +168,7 @@
                     android:layout_height="wrap_content">
                     <TextView
                         android:textAlignment="center"
-                        android:text="Ubicaciónes"
+                        android:text="Ubicaciones disponibles"
                         android:textColor="#000"
                         android:textSize="15sp"
                         android:layout_width="match_parent"

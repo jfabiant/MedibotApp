@@ -1,7 +1,6 @@
 package pe.edu.tecsup.jfabiant.medibotoriginalapp.fragments;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,9 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import pe.edu.tecsup.jfabiant.medibotoriginalapp.R;
 import pe.edu.tecsup.jfabiant.medibotoriginalapp.activities.WatsonActivity;
@@ -39,8 +36,7 @@ public class WatsonFragment extends Fragment {
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), WatsonActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(getActivity(), WatsonActivity.class));
             }
         });
 

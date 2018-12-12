@@ -1,4 +1,4 @@
-package pe.edu.tecsup.jfabiant.medibotoriginalapp.util;
+package pe.edu.tecsup.jfabiant.medibotoriginalapp.activities;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

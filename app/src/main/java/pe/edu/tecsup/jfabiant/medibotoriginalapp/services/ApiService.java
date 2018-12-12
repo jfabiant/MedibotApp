@@ -22,6 +22,8 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
 
@@ -60,8 +62,7 @@ public interface ApiService {
                                     @Field("password1") String password1,
                                     @Field("password2") String password2);
 
-    //@FormUrlEncoded
-    //@PUT("/rest-auth/user/")
-    //Call <User>
+    //@GET("/api/h_medicos/?c_usuario={c_usuario}/")
+    //Call<List<H_Medico>> get
 
 }

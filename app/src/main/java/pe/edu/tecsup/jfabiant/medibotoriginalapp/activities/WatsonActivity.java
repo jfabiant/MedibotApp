@@ -1,5 +1,6 @@
 package pe.edu.tecsup.jfabiant.medibotoriginalapp.activities;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -14,7 +15,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 
 import android.support.v7.widget.LinearLayoutManager;
@@ -51,9 +51,6 @@ import java.util.ArrayList;
 import pe.edu.tecsup.jfabiant.medibotoriginalapp.R;
 import pe.edu.tecsup.jfabiant.medibotoriginalapp.adapters.ChatAdapter;
 import pe.edu.tecsup.jfabiant.medibotoriginalapp.models.Message;
-import pe.edu.tecsup.jfabiant.medibotoriginalapp.util.ClickListener;
-import pe.edu.tecsup.jfabiant.medibotoriginalapp.util.RecyclerTouchListener;
-
 
 public class WatsonActivity extends AppCompatActivity {
 
@@ -67,7 +64,7 @@ public class WatsonActivity extends AppCompatActivity {
     private boolean initialRequest;
     private boolean permissionToRecordAccepted = false;
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
-    private static String TAG = WatsonActivity.class.getSimpleName();
+    private static String TAG = "WatsonActivity";
     private static final int RECORD_REQUEST_CODE = 101;
     private boolean listening = false;
     private MicrophoneInputStream capture;
@@ -169,8 +166,6 @@ public class WatsonActivity extends AppCompatActivity {
         createServices();
         sendMessage();
     }
-
-    ;
 
     // Speech-to-Text Record Audio permission
     @Override
@@ -408,6 +403,4 @@ public class WatsonActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

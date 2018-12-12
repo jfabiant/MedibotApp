@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.github.curioustechizen.ago.RelativeTimeTextView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -34,7 +35,7 @@ public class H_MedicoAdapter extends RecyclerView.Adapter<H_MedicoAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView fechaText;
+        public RelativeTimeTextView fechaText;
         public TextView descripcionText;
         public TextView usuarioText;
         public TextView enfermedadText;
@@ -44,9 +45,9 @@ public class H_MedicoAdapter extends RecyclerView.Adapter<H_MedicoAdapter.ViewHo
             super(itemView);
             fechaText = itemView.findViewById(R.id.fecha_text);
             descripcionText = itemView.findViewById(R.id.descripcion_text);
-            usuarioText = itemView.findViewById(R.id.usuario_text);
-            enfermedadText = itemView.findViewById(R.id.enfermedad_text);
-            hospitalText = itemView.findViewById(R.id.hospital_text);
+            //usuarioText = itemView.findViewById(R.id.usuario_text);
+            //enfermedadText = itemView.findViewById(R.id.enfermedad_text);
+            //hospitalText = itemView.findViewById(R.id.hospital_text);
             
 
         }
@@ -61,9 +62,10 @@ public class H_MedicoAdapter extends RecyclerView.Adapter<H_MedicoAdapter.ViewHo
     @Override
     public void onBindViewHolder(final H_MedicoAdapter.ViewHolder viewHolder, int position) {
 
-        H_Medico h_medico = this.h_medicos.get(position);
+        final H_Medico h_medico = this.h_medicos.get(position);
 
-        viewHolder.fechaText.setText(h_medico.getFecha().toString());
+        //viewHolder.fechaText.setText(h_medico.getFecha().toString());
+        viewHolder.fechaText.setReferenceTime(h_medico.getFecha().getTime());
         viewHolder.descripcionText.setText(h_medico.getDescripcion());
 
     }

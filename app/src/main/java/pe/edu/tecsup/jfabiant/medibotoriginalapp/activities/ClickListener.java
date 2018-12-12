@@ -1,4 +1,4 @@
-package pe.edu.tecsup.jfabiant.medibotoriginalapp.util;
+package pe.edu.tecsup.jfabiant.medibotoriginalapp.activities;
 
 import android.view.View;
 
@@ -8,6 +8,5 @@ import android.view.View;
 
 public interface ClickListener {
     void onClick(View view, int position);
-
     void onLongClick(View view, int position);
 }

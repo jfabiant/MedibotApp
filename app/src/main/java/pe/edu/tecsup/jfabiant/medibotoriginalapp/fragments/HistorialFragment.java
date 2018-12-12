@@ -2,8 +2,10 @@ package pe.edu.tecsup.jfabiant.medibotoriginalapp.fragments;
 
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -97,6 +99,10 @@ public class HistorialFragment extends Fragment {
     private void initialize () {
 
         ApiService service = ApiServiceGeneratorUser.createService(getContext(), ApiService.class);
+
+        //Get preferences:
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String pk = preferences.getString("pk", "");
 
         Call<List<H_Medico>> call = service.getH_Medicos();
 

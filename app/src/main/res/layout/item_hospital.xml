@@ -69,7 +69,7 @@
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
             android:text="Ver ubicación"
-            android:textColor="#000"
+            android:textColor="@color/address"
             app:layout_constraintTop_toBottomOf="@+id/distrito_text"
             app:layout_constraintStart_toStartOf="parent"/>
 
